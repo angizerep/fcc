@@ -1,0 +1,33 @@
+body {
+  text-align: center;
+  background-image: url("https://img.wallpapersafari.com/desktop/1440/900/38/93/wOfzb7.jpg");
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+#title, #description {
+   color: #ffffff;
+    max-width: 35%;
+    margin: auto;
+    padding: 10px;
+}
+
+form {
+  background-color: #050A30;
+  text-align: justify;
+  padding: 50px;
+  border-radius: 25px;
+  max-width: 35%;
+  margin: auto;
+  display: inline-block;
+}
+
+textarea {
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    width: 100%;
+    text-align: center;
+}

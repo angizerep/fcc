@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC: Survey Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+
+Hello Camper!
+
+Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<h1 id="title">Survey Form</h1>
+<p id="description">Form to know preferences about work</p>
+
+<div>
+  <form id="survey-form">
+
+    <label id="name-label" for="lName">Name:</label><br>
+    <input type="text" name="iName" id="name" placeholder="Enter a name" required><br><br>
+
+    <label id="email-label" for="E-mail">E-mail:</label><br>
+    <input type="email" name="E-mail" id="email" placeholder="test@test.io" required><br><br>
+
+    <label id="number-label" for="number">Number:<label><br>
+      <input type="number" name="number" id="number" min="1" max="120" placeholder="30"><br><br>
+
+      Where do you currently work? <br>
+      <select name="lista1" id="dropdown" required>
+        <option disabled selected value>select one item from the list</option>
+        <option value="NorthAmerica">North America</option>
+        <option value="SouthAmerica">South America</option>
+        <option value="Europe">Europe</option>
+        <option value="Asia">Asia</option>
+        <option value="Africa">Africa</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+      <br><br>
+
+      In which area do you prefer to work?:<br>
+      <input type="radio" name="lista2" value="Backend" checked> Backend<br>
+      <input type="radio" name="lista2" value="Frontend"> Frontend<br>
+      <input type="radio" name="lista2" value="QA"> QA<br><br>
+
+      Where do you prefer to work?:<br>
+      <input type="checkbox" name="lista3" value="Office"> Office<br>
+      <input type="checkbox" name="lista3" value="Home"> Home<br>
+      <input type="checkbox" name="lista3" value="Other"> Other<br><br>
+
+      Any comments or suggestions?<br>
+      <textarea rows="5">
+        Enter your comment here...
+      </textarea ><br><br>
+      <button type="submit" id="submit">Submit</button>
+      </form>
+</div>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
