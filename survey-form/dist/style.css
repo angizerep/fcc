@@ -6,10 +6,10 @@ body {
 }
 
 #title, #description {
-   color: #ffffff;
-    max-width: 35%;
-    margin: auto;
-    padding: 10px;
+  color: #ffffff;
+  max-width: 35%;
+  margin: auto;
+  padding: 10px;
 }
 
 form {
@@ -28,6 +28,6 @@ textarea {
 }
 
 button{
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
