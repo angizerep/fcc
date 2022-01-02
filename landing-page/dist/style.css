@@ -1,0 +1,182 @@
+body{   
+  background:url(https://wallpaperaccess.com/full/1510129.jpg);
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#image{
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1;
+}
+
+#image > div{
+    background-color: #262262;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+#image > div >img{
+    max-height: 300px;
+    max-width: 300px;
+}
+
+#container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+#body{
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFF;
+}
+
+a:hover{
+    animation-name: color-change-nav;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+#features{
+    margin-bottom: 100px;
+}
+
+#header{
+    width: 100%;
+    position: fixed;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    display: flex;  
+    flex-wrap: wrap;
+}
+
+#header > div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#header > div > nav{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#header > div > h1{
+    padding-top: 15px;
+    padding-left: 150px;
+}
+
+#feature{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.features{
+    margin: 0px 20px 50px 20px;
+    width: 300px;
+    margin-bottom: 100px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.features > p{
+    width: 100%;
+}
+
+.features > h3{
+    width: 100%;
+    border-bottom: 2px solid hsl(35, 100%, 60%);
+    background-color: hsl(0, 0%, 90%);
+}
+
+#video-wrapper{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#button-container{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+#info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+#video-wrapper > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#models{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.model-class{
+    width: 300px;
+    min-width: 100px;
+    background-color: #FFF;
+    margin: 0px 20px 0px 20px;
+    border: 1px solid black;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.model-name{
+    width: 100%;
+    background-color: hsl(0,0%,80%);
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.model-description{
+    display: flex;
+    line-height: 40px;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){
+    .model-class{
+        min-width: 300px;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+    footer > div > nav{
+        width: 60%;
+    }
+    #header > div > nav{
+        width: 100%;
+    }
+}
