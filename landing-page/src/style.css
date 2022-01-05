@@ -167,20 +167,34 @@ a:hover{
     justify-content: center;
 }
 
-@media (max-width: 1000px){
-    .model-class{
-        min-width: 300px;
-        max-width: 300px;
-        margin-top: 20px;
-    }
+button{
+    color: #262262; 
+}
+
+
+/* Landscape Mobile */
+@media only screen and (max-width: 768px) {
     footer > div > nav{
         width: 60%;
     }
     #header > div > nav{
         width: 100%;
     }
+  
+  body {
+    margin-left: 0;
+  }
 }
 
-button{
-    color: #262262; 
+/* Portrait Mobile */
+@media only screen and (max-width: 420px) {
+  body {
+    margin-left: 0;
+  }
+      footer > div > nav{
+        width: 60%;
+    }
+    #header > div > nav{
+        width: 100%;
+    }
 }
