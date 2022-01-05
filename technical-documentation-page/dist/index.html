@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - FCC: Technical Documentation Page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- 
+
+Hello Camper!
+
+Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+<!-- 
+
+Hello Camper!
+
+Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+<nav class="large_menu" id="navbar">
+    <header id="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png" id="header-img" >
+        <span class="list_title">JS Javascript</span>
+        <ul>
+            <li><a href="#History" class="nav-link">History</a></li>
+            <li><a href="#Features" class="nav-link">Features</a></li>
+            <li><a href="#Syntax" class="nav-link">Syntax</a></li>
+            <li><a href="#Security" class="nav-link">Security</a></li>
+            <li><a href="#Development_tools" class="nav-link">Development tools</a></li>
+            <li><a href="#Reference" class="nav-link">Reference</a></li>
+        </ul>
+    </header>
+</nav>
+
+
+<main id="main-doc">
+    <section class="main-section" id="History">
+        <header>History</header>
+        <article>
+            <p>
+                JavaScript (/ˈdʒɑːvəˌskrɪpt/), often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.
+            </p>
+            <p>
+                The first web browser with a graphical user interface, Mosaic, was released in 1993. Accessible to non-technical people, it played a prominent role in the rapid growth of the nascent World Wide Web.[15] The lead developers of Mosaic then founded the Netscape corporation, which released a more polished browser, Netscape Navigator, in 1994. This quickly became the most-used.
+            </p>
+
+            <p>
+                Over 97% of websites use JavaScript on the client side for web page behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
+            </p>
+            <ul>
+                <li>
+                Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation.
+                </li>
+                <li>
+                Server-side JavaScript extends the core language by supplying objects relevant to running JavaScript on a server. For example, server-side extensions allow an application to communicate with a database, provide continuity of information from one invocation to another of the application, or perform file manipulations on a server.
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="main-section" id="Features">
+        <header>Features</header>
+        <article>
+            <p>
+                JavaScript supports much of the structured programming syntax from C 
+                (e.g., if statements, while loops, switch statements, do while loops, etc.). 
+                One partial exception is scoping: originally JavaScript only had function 
+                scoping with var; then block scoping was added in ECMAScript 2015 with the 
+                keywords let and const. Like C, JavaScript makes a distinction between 
+                expressions and statements. One syntactic difference from C is automatic 
+                semicolon insertion, which allow semicolons (which terminate statements) 
+                to be omitted.
+            </p>
+            <p>
+                Weakly typed
+            </p>
+            <ul>
+                <li>
+                    The binary + operator casts both operands to a string unless both operands are numbers. 
+                    This is because the addition operator doubles as a concatenation operator                
+                </li>
+                <li>
+                    Good working knowledge of HyperText Markup Language (HTML).
+                </li>
+                <li>
+                    The binary - operator always casts both operands to a number.
+                </li>
+                <li>
+                    Both unary operators (+, -) always cast the operand to a number
+                </li>
+                <li>
+                    Strings are left as-is
+                </li>
+                <li>
+                    Numbers are converted to their string representation
+                </li>
+                <li>
+                    Arrays have their elements cast to strings after which they are joined by commas (,)
+                </li>
+                <li>
+                    Other objects are converted to the string [object Object] where Object is the name of the constructor of the object
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="main-section" id="Syntax">
+    <header>Syntax</header>
+        <article>
+            <p>
+                The syntax of JavaScript is the set of rules that define a correctly structured JavaScript program.
+            </p>
+            <p>
+                The examples below make use of the log function of the console object present in most browsers for standard text output.
+            </p>
+            <p>
+                The JavaScript standard library lacks an official standard text output function (with the exception of document.write). Given that JavaScript is mainly used for client-side scripting within modern web browsers, and that almost all Web browsers provide the alert function, alert can also be used, but is not commonly used.
+            </p>
+            
+            <p>
+                <h4>Case sensitivity</h4>
+                <code>
+                    var a=5;
+                    console.log(a); // 5
+                    console.log(A); // throws a ReferenceError: A is not defined
+                </code>
+            </p>
+
+            <p>
+                <h4>Whitespace and semicolons</h4>
+                <code>
+                    a = b + c
+                    (d + e).foo()
+                    
+                    // Treated as:
+                    //  a = b + c(d + e).foo();
+                </code>
+            </p>
+
+            <p>
+                <h4>Comments</h4>
+                <code>
+                    // a short, one-line comment
+
+                    /* this is a long, multi-line comment
+                        about my script. May it one day
+                        be great. */
+                    
+                    /* Comments /* may not be nested */ Syntax error */
+                </code>
+            </p>
+
+            <p>
+                <h4>Scoping and hoisting</h4>
+                <code>
+                    var func = function() { .. } // declaration is hoisted only
+                    function func() { .. } // declaration and assignment are hoisted
+                </code>
+            </p>
+
+            <p>
+                <h4>Undefined</h4>
+                <code>
+                    var test;                         // variable declared, but not defined, ...
+                </code>
+            </p>
+
+            <p>
+                <h4>Number</h4>
+                <code>
+                    console.log(0.2 + 0.1 === 0.3); // displays false
+                    console.log(0.94 - 0.01);       // displays 0.9299999999999999   
+                </code>
+            </p>
+
+
+        </article>
+    </section>
+
+    <section class="main-section" id="Security">
+        <header>Security</header>
+        <article>
+            <p>
+                JavaScript and the DOM provide the potential for malicious authors to deliver scripts to run on a client computer via the Web. Browser authors minimize this risk using two restrictions. 
+            </p>
+            <p>
+                First, scripts run in a sandbox in which they can only perform Web-related actions, not general-purpose programming tasks like creating files. Second, scripts are constrained by the same-origin policy: scripts from one Web site do not have access to information such as usernames, passwords, or cookies sent to another site. Most JavaScript-related security bugs are breaches of either the same origin policy or the sandbox.
+            </p>
+        </article>
+    </section>
+
+    <section class="main-section" id="Development_tools">
+        <header>Development tools</header>
+        <article>
+            <P>
+                Important tools have evolved with the language.
+            </P>
+            <ul>
+                <li>
+                    Every major web browser has built-in web development tools, including a JavaScript debugger.               
+                </li>
+                <li>
+                    Static program analysis tools, such as ESLint and JSLint, scan JavaScript code for conformance to a set of standards and guidelines.
+                </li>
+                <li>
+                    Some browsers have built-in profilers. Stand-alone profiling libraries have also been created, such as benchmark.js and jsbench.
+                </li>
+                <li>
+                    Many text editors have syntax highlighting support for JavaScript code.
+                </li>
+            </ul>
+        </article>
+    </section>
+
+    <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <span class="author">
+            <a href="https://en.wikipedia.org/wiki/JavaScript#Features">JavaScript</a></span>
+        <span class="author">
+            <a href="https://en.wikipedia.org/wiki/JavaScript_syntax">JavaScript syntax
+        </a></span>
+    </section>
+</main>
+<!-- partial -->
+  <script src='https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
