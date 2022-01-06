@@ -1,52 +1,14 @@
-/* Custom properties/variables  */
-/*
-:root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
-}
- */
-/* Base reset */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* box-sizing and font sizing */
-/* *,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
- */
 html {
   box-sizing: border-box;
-
   background: radial-gradient(circle, darken(dodgerblue, 10%), #1f4f96, #1b2949, #000);
-
-  /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-  */
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
-
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
 
 /* 1200px / 16px = 75em */
 @media (max-width: 75em) {
@@ -100,7 +62,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--main-white);
 }
 
 img {
@@ -127,6 +88,7 @@ img {
 .nav-link {
   display: flex;
   margin-right: 15px;
+  color: white;
 }
 
 @media (max-width: 28.75em) {
@@ -145,10 +107,6 @@ img {
   padding: 2rem;
 }
 
-/* .nav-list a:hover {
-  background: var(--main-blue);
-} */
-
 /* Welcome section */
 
 .welcome-section {
@@ -158,15 +116,12 @@ img {
   align-items: center;
   width: 100%;
   height: 100vh;
-  /* background-color: linear-gradient(62deg, #1e4d7b 0%, #f6edff 100%); */
-  /* background-image: linear-gradient(to right, #1e4d7b 5%, #f6edff 95%); */
 }
 
 .welcome-section > p {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-red);
 }
 
 /* Projects section */
@@ -174,7 +129,6 @@ img {
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
-  /* background: var(--main-blue); */
 }
 
 .projects-section-header {
@@ -211,18 +165,19 @@ img {
 }
 
 .project {
-  /* background: var(--main-gray); */
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
 }
 
-.code {
-  color: var(--main-gray);
+
+.project > p {
   transition: color 0.3s ease-out;
+  font-style: italic;
+  color: black;
 }
 
-.project:hover .code {
-  color: #ff7f50;
+.project > p:hover {
+  color: rgb(27, 48, 183);
 }
 
 .project-image {
@@ -244,12 +199,6 @@ img {
 
 .btn-show-all {
   font-size: 2rem;
-  /* background: var(--main-gray);
-  transition: background 0.3s ease-out; */
-}
-
-.btn-show-all:hover {
-  /* background: var(--main-red); */
 }
 
 .btn-show-all:hover > i {
@@ -273,7 +222,6 @@ img {
   width: 100%;
   height: 80vh;
   padding: 0 2rem;
-  /* background: var(--main-gray); */
 }
 
 .contact-section-header > h2 {
@@ -301,8 +249,8 @@ img {
 
 .contact-details {
   font-size: 2.4rem;
-  text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out;
+  color: black;
 }
 
 .contact-details:hover {
@@ -316,8 +264,6 @@ footer {
   display: flex;
   justify-content: space-evenly;
   padding: 2rem;
-  /* background: var(--main-gray); */
-  border-top: 4px solid var(--main-red);
 }
 
 footer > p {
