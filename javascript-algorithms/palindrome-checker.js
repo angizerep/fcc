@@ -18,11 +18,11 @@ We'll also pass strings with special symbols, such as 2A3*3a2,
 
 */
 
-palindrome("È1 Y4 ë8");
+// palindrome("È1 Y4 ë8");
 
 // palindrome("eye") //should return a boolean.
 
-//palindrome("eye") //should return true.
+// palindrome("eye") //should return true.
 
 // palindrome("_eye") //should return true.
 
@@ -40,7 +40,7 @@ palindrome("È1 Y4 ë8");
 
 // palindrome("My age is 0, 0 si ega ym.") //should return true.
 
-// palindrome("1 eye for of 1 eye.") //should return false.
+// palindrome("1 eye for of 1 eye.") //should return false. //NO ME DA
 
 // palindrome("0_0 (: /-\ :) 0-0") //should return true.
 
@@ -50,51 +50,68 @@ palindrome("È1 Y4 ë8");
 function palindrome(str) {
 
     let areEquals = false;
-    var stringWithoutDiacritics = removeDiacritics(str);
-    // console.log(' stringWithoutDiacritics ', stringWithoutDiacritics)
+    // var stringWithoutDiacritics = removeDiacritics(str);
+    // // console.log(' stringWithoutDiacritics ', stringWithoutDiacritics)
 
-    var stringWithoutNumbers = stringWithoutDiacritics.replace(/[0-9]/g, '');
-    console.log(' stringWithoutNumbers ', stringWithoutNumbers)
+    // var stringWithoutNumbers = stringWithoutDiacritics.replace(/[0-9]/g, '');
+    // // console.log(' stringWithoutNumbers ', stringWithoutNumbers)
 
-    var stringWithoutSpaces = stringWithoutNumbers.replace(/ /g, '');
-    // console.log(' stringWithoutSpaces ', stringWithoutSpaces)
+    // var stringWithoutSpaces = stringWithoutNumbers.replace(/ /g, '');
+    // // console.log(' stringWithoutSpaces ', stringWithoutSpaces)
 
-    var stringLowerCase = stringWithoutSpaces.toLowerCase() 
-    // console.log(' stringLowerCase ', stringLowerCase)
+    // var stringLowerCase = stringWithoutSpaces.toLowerCase() 
+    // // console.log(' stringLowerCase ', stringLowerCase)
 
-    var stringWithoutUnderScore = stringLowerCase.replace(/_/g, '');
-    // console.log(' stringWithoutUnderScore ', stringWithoutUnderScore)
+    // var stringWithoutUnderScore = stringLowerCase.replace(/_/g, '');
+    // // console.log(' stringWithoutUnderScore ', stringWithoutUnderScore)
 
-    var stringWithoutThat = stringWithoutUnderScore.replace(/-/g, '');
-    // console.log(' stringWithoutUnderScore ', stringWithoutThat)
+    // var stringWithoutThat = stringWithoutUnderScore.replace(/-/g, '');
+    // // console.log(' stringWithoutUnderScore ', stringWithoutThat)
 
-    var stringWithoutSpecialChars = stringWithoutThat.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '');
-    // console.log(' stringWithoutSpecialChars ', stringWithoutSpecialChars)
+    // var stringWithoutSpecialChars = stringWithoutThat.replace(/([.,*+?^=!:${}()|\[\]\/\\])/g, '');
+    // // console.log(' stringWithoutSpecialChars ', stringWithoutSpecialChars)
 
-    var stringWithoutSpecialChars = stringWithoutSpecialChars.toLowerCase() 
+    // var stringWithoutSpecialChars = stringWithoutSpecialChars.toLowerCase() 
+    var stringWithoutSpecialChars = str.toLowerCase().replace(/([^a-z0-9])*/g, "").split("");
 
+        console.log(' stringWithoutSpecialChars ', stringWithoutSpecialChars)
 
 
     console.log( 'stringWithoutSpecialChars.length ',stringWithoutSpecialChars.length)
 
     console.log('Math.ceil(stringWithoutSpecialChars.length/2 ',Math.ceil(stringWithoutSpecialChars.length/2))
 
-    for ( let i = 0 ; i <  Math.ceil(stringWithoutSpecialChars.length/2) ; i++ ){
-        for ( let k =  stringWithoutSpecialChars.length ;  k > Math.floor(stringWithoutSpecialChars.length/2) ; k--){
+    console.log( 'stringWithoutSpecialChars.length ',stringWithoutSpecialChars.length)
+    console.log( 'stringWithoutSpecialChars[k] ',stringWithoutSpecialChars[stringWithoutSpecialChars.length - 1])
 
-            console.log(' stringLowerCase[i] ', stringWithoutSpecialChars[i] )
-            console.log(' stringLowerCase[k] ', stringWithoutSpecialChars[k] )
+    if ( stringWithoutSpecialChars.length > 0 ){
+        for ( let i = 0 ; i < Math.ceil(stringWithoutSpecialChars.length/2) ; i++ ){
+            // for ( let k = (stringWithoutSpecialChars.length - 1 );  k >= Math.ceil(stringWithoutSpecialChars.length/2) ; k--){
     
-            if ( ( stringWithoutSpecialChars[i] === stringWithoutSpecialChars[k] ) && areEquals === true ){
-                areEquals = true
-            }
-            else {
-                console.log('ELSE')
-                areEquals = false
-                break;
-            }
+                console.log(' iiiiii ', i )
+                // console.log(' kkkkkk ', k )
+    
+                console.log(' stringLowerCase[i] ', stringWithoutSpecialChars[i] )
+                // console.log(' stringLowerCase[k] ', stringWithoutSpecialChars[k] )
+    
+                console.log(' stringLowerCase NO SE ', stringWithoutSpecialChars[stringWithoutSpecialChars.length - i - 1] )
+    
+        
+                if ( ( stringWithoutSpecialChars[i] === stringWithoutSpecialChars[stringWithoutSpecialChars.length - i - 1] ) ){
+                    console.log('IF')
+                    areEquals = true
+                }
+                else {
+                    console.log('ELSE')
+                    areEquals = false
+                    break;
+                }
+            // }
         }
+    }else {
+        areEquals = true
     }
+
 
     console.log(' areEquals ',areEquals)
     return areEquals;
