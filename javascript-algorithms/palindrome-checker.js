@@ -64,6 +64,5 @@ function palindrome(str) {
         }
     }
 
-
     return areEquals;
 }
