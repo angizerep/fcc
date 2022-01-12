@@ -18,8 +18,6 @@ We'll also pass strings with special symbols, such as 2A3*3a2,
 
 */
 
-// palindrome("È1 Y4 ë8");
-
 // palindrome("eye") //should return a boolean.
 
 // palindrome("eye") //should return true.
