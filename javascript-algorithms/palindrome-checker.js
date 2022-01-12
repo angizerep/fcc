@@ -47,11 +47,19 @@ palindrome("five|\_/|four") //should return false.
 
 function palindrome(str) {
 
-    var newString = removeDiacritics(str);
-    console.log(' newString ', newString)
+    var stringWithoutDiacritics = removeDiacritics(str);
+    console.log(' stringWithoutDiacritics ', stringWithoutDiacritics)
+    var stringWithoutNumbers = stringWithoutDiacritics.replace(/[0-9]/g, '');
+    console.log(' stringWithoutNumbers ', stringWithoutNumbers)
+    var stringWithoutSpaces = stringWithoutNumbers.replace(/ /g, '');
+    console.log(' stringWithoutSpaces ', stringWithoutSpaces)
+    var stringLowerCase = stringWithoutSpaces.toLowerCase() 
+    console.log(' stringLowerCase ', stringLowerCase)
+
+    
+
     return true;
 }
-
 
 function removeDiacritics(string){
 
@@ -79,5 +87,7 @@ function removeDiacritics(string){
     return string;
 };
 
-palindrome("èyë");
+
+
+palindrome("È1 Y4 ë8");
 
