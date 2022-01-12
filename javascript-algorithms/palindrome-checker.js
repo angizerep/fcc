@@ -16,49 +16,88 @@ RaceCar, and race CAR among others.
 We'll also pass strings with special symbols, such as 2A3*3a2, 
 2A3 3a2, and 2_A3*3#A2. 
 
-
-palindrome("eye") //should return a boolean.
-
-palindrome("eye") //should return true.
-
-palindrome("_eye") //should return true.
-
-palindrome("race car") //should return true.
-
-palindrome("not a palindrome") //should return false.
-
-palindrome("A man, a plan, a canal. Panama") //should return true.
-
-palindrome("never odd or even") //should return true.
-
-palindrome("nope") //should return false.
-
-palindrome("almostomla") //should return false.
-
-palindrome("My age is 0, 0 si ega ym.") //should return true.
-
-palindrome("1 eye for of 1 eye.") //should return false.
-
-palindrome("0_0 (: /-\ :) 0-0") //should return true.
-
-palindrome("five|\_/|four") //should return false.
-
 */
+
+palindrome("È1 Y4 ë8");
+
+// palindrome("eye") //should return a boolean.
+
+//palindrome("eye") //should return true.
+
+// palindrome("_eye") //should return true.
+
+// palindrome("race car") //should return true.
+
+// palindrome("not a palindrome") //should return false.
+
+// palindrome("A man, a plan, a canal. Panama") //should return true.
+
+// palindrome("never odd or even") //should return true.
+
+// palindrome("nope") //should return false.
+
+// palindrome("almostomla") //should return false.
+
+// palindrome("My age is 0, 0 si ega ym.") //should return true.
+
+// palindrome("1 eye for of 1 eye.") //should return false.
+
+// palindrome("0_0 (: /-\ :) 0-0") //should return true.
+
+// palindrome("five|\_/|four") //should return false.
+
 
 function palindrome(str) {
 
+    let areEquals = false;
     var stringWithoutDiacritics = removeDiacritics(str);
-    console.log(' stringWithoutDiacritics ', stringWithoutDiacritics)
+    // console.log(' stringWithoutDiacritics ', stringWithoutDiacritics)
+
     var stringWithoutNumbers = stringWithoutDiacritics.replace(/[0-9]/g, '');
     console.log(' stringWithoutNumbers ', stringWithoutNumbers)
+
     var stringWithoutSpaces = stringWithoutNumbers.replace(/ /g, '');
-    console.log(' stringWithoutSpaces ', stringWithoutSpaces)
+    // console.log(' stringWithoutSpaces ', stringWithoutSpaces)
+
     var stringLowerCase = stringWithoutSpaces.toLowerCase() 
-    console.log(' stringLowerCase ', stringLowerCase)
+    // console.log(' stringLowerCase ', stringLowerCase)
 
+    var stringWithoutUnderScore = stringLowerCase.replace(/_/g, '');
+    // console.log(' stringWithoutUnderScore ', stringWithoutUnderScore)
+
+    var stringWithoutThat = stringWithoutUnderScore.replace(/-/g, '');
+    // console.log(' stringWithoutUnderScore ', stringWithoutThat)
+
+    var stringWithoutSpecialChars = stringWithoutThat.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, '');
+    // console.log(' stringWithoutSpecialChars ', stringWithoutSpecialChars)
+
+    var stringWithoutSpecialChars = stringWithoutSpecialChars.toLowerCase() 
+
+
+
+    console.log( 'stringWithoutSpecialChars.length ',stringWithoutSpecialChars.length)
+
+    console.log('Math.ceil(stringWithoutSpecialChars.length/2 ',Math.ceil(stringWithoutSpecialChars.length/2))
+
+    for ( let i = 0 ; i <  Math.ceil(stringWithoutSpecialChars.length/2) ; i++ ){
+        for ( let k =  stringWithoutSpecialChars.length ;  k > Math.floor(stringWithoutSpecialChars.length/2) ; k--){
+
+            console.log(' stringLowerCase[i] ', stringWithoutSpecialChars[i] )
+            console.log(' stringLowerCase[k] ', stringWithoutSpecialChars[k] )
     
+            if ( ( stringWithoutSpecialChars[i] === stringWithoutSpecialChars[k] ) && areEquals === true ){
+                areEquals = true
+            }
+            else {
+                console.log('ELSE')
+                areEquals = false
+                break;
+            }
+        }
+    }
 
-    return true;
+    console.log(' areEquals ',areEquals)
+    return areEquals;
 }
 
 function removeDiacritics(string){
@@ -86,8 +125,4 @@ function removeDiacritics(string){
 
     return string;
 };
-
-
-
-palindrome("È1 Y4 ë8");
 
