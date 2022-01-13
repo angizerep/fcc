@@ -86,3 +86,7 @@ otherwise return false.
 
 // telephoneCheck("55 55-55-555-5") // should return false.
 
+function telephoneCheck(str) {
+    
+    return true;
+}
