@@ -87,6 +87,21 @@ otherwise return false.
 // telephoneCheck("55 55-55-555-5") // should return false.
 
 function telephoneCheck(str) {
-    
-    return true;
+
+    var isValid = false
+
+    var phone = str.replace(/([^a-z0-9])*/g, "")
+
+    console.log('phone ',phone)
+
+    if ( ! /^[0-9]+$/.test(phone) ){
+        console.log('Contiene cosas raras')
+    }else{
+
+        isValid = true
+    }
+    return isValid;
 }
+
+var res = telephoneCheck("(6054756961)");
+console.log(res)
