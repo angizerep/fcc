@@ -87,21 +87,35 @@ otherwise return false.
 // telephoneCheck("55 55-55-555-5") // should return false.
 
 function telephoneCheck(str) {
+    // Good luck!
+        
+    var isValid = false;
 
-    var isValid = false
+    var validFormats = [
+        /^\d\d\d\d\d\d\d\d\d\d$/,			// 5555555555
+        /^\d\d\d-\d\d\d-\d\d\d\d/,			// 555-555-5555
+        /^\d\d\d\s\d\d\d\s\d\d\d\d/,		// 555 555 5555
+        /^\(\d\d\d\)\d\d\d-\d\d\d\d/,		// (555)555-5555
+        /^\(\d\d\d\)\s\d\d\d-\d\d\d\d/,		// (555) 555-5555
+        /^1\d\d\d\d\d\d\d\d\d\d/,			// 15555555555
+        /^1\s\d\d\d\s\d\d\d\s\d\d\d\d/,		// 1 555 555 5555
+        /^1\s\d\d\d-\d\d\d-\d\d\d\d/,		// 1 555-555-5555
+        /^1\(\d\d\d\)\d\d\d-\d\d\d\d/,		// 1(555)555-5555
+        /^1\s\(\d\d\d\)\s\d\d\d-\d\d\d\d/	// 1 (555) 555-5555
+    ];
 
-    var phone = str.replace(/([^a-z0-9])*/g, "")
+    isValid = validFormats.some(reg => reg.test(str));
 
-    console.log('phone ',phone)
-
-    if ( ! /^[0-9]+$/.test(phone) ){
-        console.log('Contiene cosas raras')
-    }else{
-
-        isValid = true
-    }
     return isValid;
 }
 
-var res = telephoneCheck("(6054756961)");
-console.log(res)
+
+    let test1 = telephoneCheck("(555)555-5555"); // should return true
+    let test2 = telephoneCheck("1 555-555-5555"); // should return true.
+    let test3 = telephoneCheck("2 (757) 622-7382"); // should return false.
+    let test4 = telephoneCheck("27576227382"); // should return false.
+
+    console.log ( test1 )
+    console.log ( test2 )
+    console.log ( test3 )
+    console.log ( test4 )
