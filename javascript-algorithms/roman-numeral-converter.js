@@ -10,10 +10,10 @@ All roman numerals answers should be provided in upper-case.
 
 function convertToRoman(num) {
 
-    var unidad = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
-    var decena = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
-    var centena = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
-    var mil = ["", "M", "MM", "MMM", "MMMM"];
+    var units = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
+    var tens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
+    var hundreds = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
+    var thousands = ["", "M", "MM", "MMM", "MMMM"];
 
 
     return roman;
