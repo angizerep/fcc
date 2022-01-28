@@ -15,6 +15,12 @@ function convertToRoman(num) {
     var hundreds = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
     var thousands = ["", "M", "MM", "MMM", "MMMM"];
 
+    var numberUnit = 0
+    var numberTens = 0
+    var numberHundreds = 0
+    var numberThousands = 0
+
+    var romanNumber = ''
 
     return roman;
 }
