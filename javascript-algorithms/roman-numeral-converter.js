@@ -20,16 +20,17 @@ function convertToRoman(num) {
     var numberHundreds = 0
     var numberThousands = 0
 
+    var mil = (num-(num%1000))/1000;
+    var cen = (num-(num%100))/100;
+    var res = num%100;
+    var dec = (res-(res%10))/10;
+    var uni = res%10;
 
-    if ( num < 10 ){
-
-    } else if ( 9 < num < 100 ){
-
-    } else if ( 999 < num < 1000 ){
-        
-    }
+    console.log(mil, cen, dec, uni)
 
     var romanNumber = ''
 
-    return roman;
+    // return roman;
 }
+
+convertToRoman(6908);
