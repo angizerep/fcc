@@ -20,6 +20,15 @@ function convertToRoman(num) {
     var numberHundreds = 0
     var numberThousands = 0
 
+
+    if ( num < 10 ){
+
+    } else if ( 9 < num < 100 ){
+
+    } else if ( 999 < num < 1000 ){
+        
+    }
+
     var romanNumber = ''
 
     return roman;
