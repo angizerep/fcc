@@ -21,14 +21,24 @@ function convertToRoman(num) {
     var numberThousands = 0
 
     var mil = (num-(num%1000))/1000;
-    var cen = (num-(num%100))/100;
-    var res = num%100;
-    var dec = (res-(res%10))/10;
-    var uni = res%10;
+    var resMil = num%1000;
+    var cen = (resMil-(resMil%100))/100;
+    var resCen = num%100;
+    var dec = (resCen-(resCen%10))/10;
+    var uni = resCen%10;
 
     console.log(mil, cen, dec, uni)
 
     var romanNumber = ''
+
+    // for ( let i = 0 ; i < units.length ; i++ ){
+    //     numberUnit = units.
+    // }
+
+    numberUnit = units[uni]
+    console.log('units ',units)
+    console.log('units ',units[uni])
+    console.log('numberUnit ',numberUnit)
 
     // return roman;
 }
