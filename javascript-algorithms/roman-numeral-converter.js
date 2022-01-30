@@ -13,12 +13,7 @@ function convertToRoman(num) {
     var units = ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"];
     var tens = ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"];
     var hundreds = ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"];
-    var thousands = ["", "M", "MM", "MMM", "MMMM"];
-
-    var numberUnit = 0
-    var numberTens = 0
-    var numberHundreds = 0
-    var numberThousands = 0
+    var thousands = ["", "M", "MM", "MMM", "MMMM", "IV", "V", "VM", "VMM", "VMMM", "IX"];
 
     var mil = (num-(num%1000))/1000;
     var resMil = num%1000;
@@ -27,20 +22,14 @@ function convertToRoman(num) {
     var dec = (resCen-(resCen%10))/10;
     var uni = resCen%10;
 
-    console.log(mil, cen, dec, uni)
+    let numberUnit = units[uni]
+    let numberTens = tens[dec]
+    let numberHundreds = hundreds[cen]
+    let numberThousands = thousands[mil]
 
-    var romanNumber = ''
+    num = numberThousands + numberHundreds + numberTens + numberUnit
 
-    // for ( let i = 0 ; i < units.length ; i++ ){
-    //     numberUnit = units.
-    // }
-
-    numberUnit = units[uni]
-    console.log('units ',units)
-    console.log('units ',units[uni])
-    console.log('numberUnit ',numberUnit)
-
-    // return roman;
+    return num;
 }
 
 convertToRoman(6908);
