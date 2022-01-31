@@ -32,7 +32,48 @@ non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
 
 
 function rot13(str) {
-    return str;
 
+    const input = [ 'A','B','C','D','E','F','G','H','I','J','K','L','M','N',
+    'O','P','Q','R','S','T','U','V','W','X','Y']
+
+    let word =''
+
+    // console.log('Input ', input)
+
+    // var output = reverse( input ) //input.reverse()
+    
+    var output = [ 'N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A','B',
+    'C','D','E','F','G','H','I','J','K','L','M']
+
+    console.log('Output ', output)
+
+    for( let i = 0 ; i <= str.length ; i++ ){
+
+        if ( str[i] === " " ){
+            word = word + " "
+        }else{
+            for ( let j = 0 ; j <= input.length ; j++ ){
+                if ( str[i] === input[j] ){
+                    console.log('esteee')
+                    console.log('Letra ', output[j])
+                    word = word + output[j]
+                    break
+                }
+            }
+        }
+    }
+
+    console.log('word ', word)
+
+    return word;
 }
 
+function reverse (input){
+
+    let reverse = input.reverse()
+
+    console.log('reverse ',reverse)
+
+    return reverse
+}
+rot13("SERR PBQR PNZC")
