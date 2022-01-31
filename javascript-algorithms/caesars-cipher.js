@@ -34,21 +34,14 @@ non-alphabetic character (i.e. spaces, punctuation), but do pass them on.
 function rot13(str) {
 
     const input = [ 'A','B','C','D','E','F','G','H','I','J','K','L','M','N',
-    'O','P','Q','R','S','T','U','V','W','X','Y']
+    'O','P','Q','R','S','T','U','V','W','X','Y', 'Z']
 
     let word =''
 
-    // console.log('Input ', input)
-
-    // var output = reverse( input ) //input.reverse()
-    
     var output = [ 'N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A','B',
     'C','D','E','F','G','H','I','J','K','L','M']
 
-    // console.log('Output ', output)
-
     for( let i = 0 ; i < str.length ; i++ ){
-
         if ( str[i] === " " ){
             word = word + " "
         }else if ( str[i] === '!' || str[i] === '?' || str[i] === '.' )  {
@@ -56,8 +49,6 @@ function rot13(str) {
         }else {
             for ( let j = 0 ; j < input.length ; j++ ){
                 if ( str[i] === input[j] ){
-                    // console.log('esteee')
-                    // console.log('Letra ', output[j])
                     word = word + output[j]
                     break
                 }
@@ -65,12 +56,14 @@ function rot13(str) {
         }
     }
 
-    // console.log('word ', word)
-
     return word;
 }
 
-rot13("SERR PBQR PNZC") //FREE CODE CAMP
-rot13("SERR CVMMN!") //FREE PIZZA!
-rot13("SERR YBIR?") //FREE LOVE?
-rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.") //THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+let test1 = rot13("SERR PBQR PNZC") //FREE CODE CAMP
+let test2 = rot13("SERR CVMMN!") //FREE PIZZA!
+let test3 = rot13("SERR YBIR?") //FREE LOVE?
+let test4 = rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.") //THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
+console.log(test1)
+console.log(test2)
+console.log(test3)
+console.log(test4)
