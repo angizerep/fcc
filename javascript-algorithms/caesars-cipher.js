@@ -45,17 +45,19 @@ function rot13(str) {
     var output = [ 'N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A','B',
     'C','D','E','F','G','H','I','J','K','L','M']
 
-    console.log('Output ', output)
+    // console.log('Output ', output)
 
-    for( let i = 0 ; i <= str.length ; i++ ){
+    for( let i = 0 ; i < str.length ; i++ ){
 
         if ( str[i] === " " ){
             word = word + " "
-        }else{
-            for ( let j = 0 ; j <= input.length ; j++ ){
+        }else if ( str[i] === '!' || str[i] === '?' || str[i] === '.' )  {
+            word = word + str[i]
+        }else {
+            for ( let j = 0 ; j < input.length ; j++ ){
                 if ( str[i] === input[j] ){
-                    console.log('esteee')
-                    console.log('Letra ', output[j])
+                    // console.log('esteee')
+                    // console.log('Letra ', output[j])
                     word = word + output[j]
                     break
                 }
@@ -63,17 +65,12 @@ function rot13(str) {
         }
     }
 
-    console.log('word ', word)
+    // console.log('word ', word)
 
     return word;
 }
 
-function reverse (input){
-
-    let reverse = input.reverse()
-
-    console.log('reverse ',reverse)
-
-    return reverse
-}
-rot13("SERR PBQR PNZC")
+rot13("SERR PBQR PNZC") //FREE CODE CAMP
+rot13("SERR CVMMN!") //FREE PIZZA!
+rot13("SERR YBIR?") //FREE LOVE?
+rot13("GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT.") //THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG.
